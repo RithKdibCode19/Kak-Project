@@ -5,13 +5,17 @@
     font-family: "Roboto", sans-serif;
 }
 .Navigation{
-    width: 90%;
+    width: 100%;
     height: 60px;
     margin: 20px auto;
     font-weight: 600;
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
 }
 .Navigation h3{
     margin-left: 100px;
+    padding: 7px;
     color: #fff;
 }
 .Navigation .menu-nav{
@@ -34,13 +38,15 @@
     transition: 0.4;
 }
 .hero{
-    width: 70%;
+    width: 80%;
     height: 70vh;
-    margin: 20px auto;
+    display: flex;
+    margin-left: 10%;
 }
-.caption{
+.hero  .caption{
     width: 40%;
-    padding-top: 100px;
+    padding-top: 10%;
+    padding-left: 10%;
     line-height: 25px;
     color: #fff;
     transition: 0.4;
@@ -62,9 +68,10 @@
 .hero input:hover{
     transition: 0.4;
     background-color: green;
-}
+} 
 .hero .img{
-    
+    margin-left: 20%;
+    margin-top: 50px;
 }
 .img img{
     width: 400px;
@@ -72,7 +79,7 @@
     transition: all 0.5s ease;
 }
 .img img:hover{
-    /* transition: 0.4; */
+    /* transition: 0.4; replace of all*/
     transform: scale(1.04);
 }
 
@@ -84,10 +91,63 @@
 
 
 @media  (max-width: 576px){
-   
+    .Navigation h3{
+        margin: 10px 60px;
+    }
+    .hero{
+        display: flex;
+        width: 70%;
+        height: 100%;
+    }
+    .hero .img{
+        width: 10%;
+        height: 100%;
+        margin-left: -1%;
+    }
+    .hero .img img{
+        width: 150px;
+        height: 150px;
+       
+    }
+    .hero .caption h1{
+        margin: 40px auto;
+        font-size: 20px;
+    }
+    .hero .caption p{
+        display: none;
+    }
 }
-@media  (max-width: 768){
-
+@media  (max-width: 768px){
+    
+    .menu-nav .menu{
+        font-size: 22px;
+    }
+    .hero{
+        display: flex;
+        width: 90%;
+        height: 100%;
+        justify-content: space-between;
+    }
+    .hero  .caption{
+        width: 50%;
+        margin: -5%;
+    }
+    .hero .img{
+        width: 50%;
+        height: 100%;
+        margin-top: 0;
+    }
+    .hero .img img{
+        width: 250px;
+        height: 250px;
+    }
+    .hero .caption h1{
+        font-size: 20px;
+    }
+    .hero .caption p{
+        font-size: 13px;
+    }
+    
 }
 @media (max-width:992px){
     .caption{
@@ -97,12 +157,12 @@
     .caption h1{
         font-size: 30px;
     }
+    .hero .img{
+        margin-left: 0;
+    }
     .img img{
         padding-top: 20px;
         width: 300px;
         height: 300px;
     }
-}
-@media (max-width:1200px){
-
 }
